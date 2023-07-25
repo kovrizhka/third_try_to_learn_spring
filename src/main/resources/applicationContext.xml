@@ -11,4 +11,9 @@
           class="ru.kovrizhkin.springlearn.Portugal">
     </bean>
 
+    <bean id="jetBean"
+          class="ru.kovrizhkin.springlearn.SoFuckingBigJetToMostTripInMyLife">
+          <constructor-arg ref="tripBean" />
+    </bean>
+
 </beans>

@@ -6,10 +6,7 @@ public class TestSpringApp {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Voyage voyage = (Voyage) context.getBean("tripBean");
-
-        SoFuckingBigJetToMostTripInMyLife jet = new SoFuckingBigJetToMostTripInMyLife(voyage);
-
+        SoFuckingBigJetToMostTripInMyLife jet = context.getBean("jetBean", SoFuckingBigJetToMostTripInMyLife.class);
         jet.letsFly();
 
         context.close();
